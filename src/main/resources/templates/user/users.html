@@ -1,17 +1,32 @@
 <meta charset="UTF-8">
     <title>users.html画面</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
     <h1 th:text="${pageTitle}">Default Title</h1>
-    
     <p class="table">LINEユーザー情報情報のリスト</p>
-    <tr th:each="lineUser : ${lineUserList}">
-        <td th:text="${lineUser.id}"></td>
-        <td th:text="${lineUser.email}"></td>
-        <td th:text="${lineUser.fullName}"></td>
-        <td th:text="${lineUser.carNumber}"></td>
-        <td th:text="${lineUser.lineUserId}"></td>
-    </tr>
+    <table>
+        <thead>
+            <tr>
+                <th>ユーザーID</th>
+                <th>メールアドレス</th>
+                <th>氏名</th>
+                <th>カーナンバー</th>
+                <th>ラインID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="lineUser : ${lineUserList}">
+                <td th:text="${lineUser.id}"></td>
+                <td th:text="${lineUser.email}"></td>
+                <td th:text="${lineUser.fullName}"></td>
+                <td th:text="${lineUser.carNumber}"></td>
+                <td th:text="${lineUser.lineUserId}"></td>
+            </tr>
+            <!-- 追加の行を必要に応じて記述 -->
+        </tbody>
+    </table>
+    
 </body>
 </html>
