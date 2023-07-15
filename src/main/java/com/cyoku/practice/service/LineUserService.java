@@ -9,6 +9,7 @@ import com.cyoku.practice.domain.model.LineUser;
 /**
  * serviceImplの役割
  * ただしMybatisではインターフェース(LineUserMapper)は継承しない
+ * 動かないので一旦継承しておく
  */
 @Service
 public class LineUserService {
@@ -16,7 +17,7 @@ public class LineUserService {
     /**
      * repositoryに該当するMapperインターフェースをAutoWiredする
      */
-    @Autowired
+    //@Autowired
     private LineUserMapper lineUserMapper;
 
     /**
