@@ -1,0 +1,1 @@
+INSERT INTO line_user VALUES(1, 'lshibuya.tk@gmail.com', '澁谷晶久' ,'24-43', 'Uf3f22733800df338f181a0b0ad092d02');
